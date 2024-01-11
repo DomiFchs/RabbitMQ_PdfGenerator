@@ -1,0 +1,42 @@
+﻿version: '3'
+
+services:
+  view:
+    image: view
+    build:
+      context: .
+      dockerfile: View/Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:latest
+    container_name: mysqlContainer
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'dominik05!'
+      MYSQL_DATABASE: 'todoDB'
+    ports:
+      - '3307:3306'
+    expose:
+      - '3307'
+    volumes:
+      - my-db:/var/lib/mysql
+  
+  pdfGenerator:
+    image: pdfgenerator
+    build:
+      context: .
+      dockerfile: PDFGenerator/Dockerfile
+  
+  rabbitmqServer:
+    image: rabbitmq:3-management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    volumes:
+      - my-db:/var/lib/rabbitmq
+volumes:
+  my-db:

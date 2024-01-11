@@ -1,0 +1,22 @@
+# This is a generated file. Not intended for manual editing.
+version: "3"
+services:
+  pdfGenerator:
+    build:
+      context: "C:\\Users\\Dominik\\Desktop\\Schule\\SEW\\Todos_App"
+      dockerfile: "PDFGenerator/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net7.0/PDFGenerator.dll"
+    environment:
+      DOTNET_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "pdfgenerator:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\Dominik\\.nuget\\packages:/root/.nuget/packages"
+    - "C:\\Users\\Dominik\\Desktop\\Schule\\SEW\\Todos_App\\PDFGenerator:/app:rw"
+    - "C:\\Users\\Dominik\\Desktop\\Schule\\SEW\\Todos_App:/src:rw"
+    working_dir: "/app"

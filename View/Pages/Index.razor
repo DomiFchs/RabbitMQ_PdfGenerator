@@ -1,0 +1,48 @@
+﻿@page "/"
+@inject IRepository<ToDo> ToDoRepository
+@inject MessageService MessageService
+
+<PageTitle>Index</PageTitle>
+
+<h1>ToDos:</h1>
+
+<ul>
+    @foreach (var todo in _toDos)
+    {
+        <li>@todo.Title</li>
+    }
+</ul>
+
+<div>
+    <input type="text" @bind="_newToDoTitle" placeholder="Enter new ToDo title" />
+    <button @onclick="AddToDo">Add ToDo</button>
+</div>
+<button @onclick="ClearToDos">Clear ToDos</button>
+<button @onclick="SendToQueue">Save to PDF</button>
+
+@code {
+
+    List<ToDo> _toDos = new();
+    string _newToDoTitle = string.Empty;
+    
+    protected override async Task OnInitializedAsync() {
+        _toDos = await ToDoRepository.ReadAsync(new CancellationToken());
+    }
+    
+    private async Task AddToDo() {
+        if(string.IsNullOrWhiteSpace(_newToDoTitle)) return;
+        await ToDoRepository.CreateAsync(new ToDo { Title = _newToDoTitle }, new CancellationToken());
+        _newToDoTitle = string.Empty;
+        _toDos = await ToDoRepository.ReadAsync(new CancellationToken());
+    }
+    
+    private async Task ClearToDos() {
+        if(_toDos.Count == 0) return;
+        await ToDoRepository.DeleteAsync(_toDos,new CancellationToken());
+        _toDos = new();
+    }
+
+    private void SendToQueue() {
+        MessageService.SendMessage(_toDos);
+    }
+}

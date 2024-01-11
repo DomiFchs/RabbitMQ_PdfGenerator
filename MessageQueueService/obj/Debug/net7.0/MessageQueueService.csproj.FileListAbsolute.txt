@@ -1,0 +1,15 @@
+C:\Users\Dominik\Desktop\Schule\SEW\Todos_App\MessageQueueService\bin\Debug\net7.0\MessageQueueService.deps.json
+C:\Users\Dominik\Desktop\Schule\SEW\Todos_App\MessageQueueService\bin\Debug\net7.0\MessageQueueService.dll
+C:\Users\Dominik\Desktop\Schule\SEW\Todos_App\MessageQueueService\bin\Debug\net7.0\MessageQueueService.pdb
+C:\Users\Dominik\Desktop\Schule\SEW\Todos_App\MessageQueueService\bin\Debug\net7.0\Model.dll
+C:\Users\Dominik\Desktop\Schule\SEW\Todos_App\MessageQueueService\bin\Debug\net7.0\Model.pdb
+C:\Users\Dominik\Desktop\Schule\SEW\Todos_App\MessageQueueService\obj\Debug\net7.0\MessageQueueService.csproj.AssemblyReference.cache
+C:\Users\Dominik\Desktop\Schule\SEW\Todos_App\MessageQueueService\obj\Debug\net7.0\MessageQueueService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dominik\Desktop\Schule\SEW\Todos_App\MessageQueueService\obj\Debug\net7.0\MessageQueueService.AssemblyInfoInputs.cache
+C:\Users\Dominik\Desktop\Schule\SEW\Todos_App\MessageQueueService\obj\Debug\net7.0\MessageQueueService.AssemblyInfo.cs
+C:\Users\Dominik\Desktop\Schule\SEW\Todos_App\MessageQueueService\obj\Debug\net7.0\MessageQueueService.csproj.CoreCompileInputs.cache
+C:\Users\Dominik\Desktop\Schule\SEW\Todos_App\MessageQueueService\obj\Debug\net7.0\MessageQueueService.csproj.CopyComplete
+C:\Users\Dominik\Desktop\Schule\SEW\Todos_App\MessageQueueService\obj\Debug\net7.0\MessageQueueService.dll
+C:\Users\Dominik\Desktop\Schule\SEW\Todos_App\MessageQueueService\obj\Debug\net7.0\refint\MessageQueueService.dll
+C:\Users\Dominik\Desktop\Schule\SEW\Todos_App\MessageQueueService\obj\Debug\net7.0\MessageQueueService.pdb
+C:\Users\Dominik\Desktop\Schule\SEW\Todos_App\MessageQueueService\obj\Debug\net7.0\ref\MessageQueueService.dll
