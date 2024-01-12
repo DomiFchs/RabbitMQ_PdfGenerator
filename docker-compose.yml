@@ -2,7 +2,6 @@
 
 services:
   view:
-    image: view
     build:
       context: .
       dockerfile: View/Dockerfile
@@ -26,10 +25,11 @@ services:
       - my-db:/var/lib/mysql
   
   pdfGenerator:
-    image: pdfgenerator
     build:
       context: .
       dockerfile: PDFGenerator/Dockerfile
+    volumes:
+      - ./pdfs:/app/pdfs
   
   rabbitmqServer:
     image: rabbitmq:3-management

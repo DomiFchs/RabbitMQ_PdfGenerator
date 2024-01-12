@@ -29,6 +29,6 @@ public class PdfService {
                     x.CurrentPageNumber();
                 });
             });
-        }).GeneratePdf($"Todos_{Guid.NewGuid()}.pdf");
+        }).GeneratePdf($"/app/pdfs/Todos_{Guid.NewGuid()}.pdf");
     }
 }
